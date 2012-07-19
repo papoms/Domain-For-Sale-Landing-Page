@@ -1,1 +1,7 @@
 /* Your Custom Styles */
+
+body{
+	max-width:960px;
+	margin:25px auto;
+	
+}

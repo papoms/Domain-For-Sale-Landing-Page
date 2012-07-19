@@ -312,7 +312,7 @@ Create an abstraction, as per: csswizardry.com/2011/09/the-nav-abstraction/
 	display:inline;
 }
 .nav a{
-	display:inline-block;
+/*	display:inline-block;*/
 }
 
 
