@@ -10,6 +10,7 @@ $bg: #ededed url(../img/css/light_noise_diagonal.png) repeat top left;;
 $border-color: #cdcdcd;
 
 $handwriting:'Asap','Arvo','Reenie Beanie', cursive;
+$handwriting:'Reenie Beanie', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $sansfont:'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 /* Mixins */
 
@@ -36,25 +37,27 @@ header {
 	border-bottom:1px solid $border-color;
 }
 
+a{
+	text-decoration:underline;
+}
 #content{
-	max-width:756px;
-	margin: 25px auto;
+	max-width:600px;
+	margin: 35px auto;
 }
 
-#introduction{
-	width:50%;
-	float:left;
-	text-align:left;
-	padding-right:45px;
+#left-content{
+	width:100%;
 }
 
-#right-form{
+/*#right-content{
 	float:right;
+	width:50%;
 }
-
+*/
 #more-information input{
 	padding:8px;
 	width: 300px;
+	margin-top:8px;
 }
 
 
@@ -78,6 +81,7 @@ h2{
 
 .fn{
 	position: relative;
+	text-decoration:none;
 	top:-7px;
 	font-size:60%;
 	color:inherit;
@@ -87,8 +91,16 @@ h2{
 	}
 }
 
+#fn-details{
+	color:#999;
+	a {
+		text-decoration:none;
+	}
+}
+
 .button {
-	font:24px $sansfont; 
+	font:24px $sansfont;
+	text-decoration:none; 
 	color: #ffffff;
 	padding: 10px 20px;
 	cursor:pointer;

@@ -12,22 +12,25 @@ header {
   padding: 40px;
   border-bottom: 1px solid #cdcdcd; }
 
+a {
+  text-decoration: underline; }
+
 #content {
-  max-width: 756px;
-  margin: 25px auto; }
+  max-width: 600px;
+  margin: 35px auto; }
 
-#introduction {
-  width: 50%;
-  float: left;
-  text-align: left;
-  padding-right: 45px; }
+#left-content {
+  width: 100%; }
 
-#right-form {
-  float: right; }
-
+/*#right-content{
+	float:right;
+	width:50%;
+}
+*/
 #more-information input {
   padding: 8px;
-  width: 300px; }
+  width: 300px;
+  margin-top: 8px; }
 
 footer {
   min-height: 100px;
@@ -36,15 +39,16 @@ footer {
   font-size: 12px; }
 
 h1 {
-  font: 96px "Asap", "Arvo", "Reenie Beanie", cursive; }
+  font: 96px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h2 {
-  font: 56px "Asap", "Arvo", "Reenie Beanie", cursive;
+  font: 56px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: red;
   margin-bottom: 35px; }
 
 .fn {
   position: relative;
+  text-decoration: none;
   top: -7px;
   font-size: 60%;
   color: inherit; }
@@ -52,8 +56,14 @@ h2 {
     text-decoration: none;
     color: #000; }
 
+#fn-details {
+  color: #999; }
+  #fn-details a {
+    text-decoration: none; }
+
 .button {
   font: 24px "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
   color: #ffffff;
   padding: 10px 20px;
   cursor: pointer;
