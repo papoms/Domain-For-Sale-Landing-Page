@@ -1,0 +1,121 @@
+
+
+
+
+
+/* Variables */
+
+$banner-bg: #fff; 
+$bg: #ededed url(../img/css/light_noise_diagonal.png) repeat top left;;
+$border-color: #cdcdcd;
+
+$handwriting:'Asap','Arvo','Reenie Beanie', cursive;
+$sansfont:'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Mixins */
+
+@mixin gradient($from, $to){
+	background-color: $from;
+	background-image: -moz-linear-gradient($from, $to);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+	background-image: -webkit-linear-gradient($from, $to);
+	background-image: -o-linear-gradient($from, $to);
+}
+
+/* Custom Styles */
+
+body{
+	background:$bg;
+	font: 18px $sansfont;
+	line-height:1.5em;
+}
+
+header {
+	min-height:250px;
+	background:$banner-bg;
+	padding:40px;
+	border-bottom:1px solid $border-color;
+}
+
+#content{
+	max-width:756px;
+	margin: 25px auto;
+}
+
+#introduction{
+	width:50%;
+	float:left;
+	text-align:left;
+	padding-right:45px;
+}
+
+#right-form{
+	float:right;
+}
+
+#more-information input{
+	padding:8px;
+	width: 300px;
+}
+
+
+footer{
+	min-height:100px;
+	background:$banner-bg;
+	border-top:1px solid $border-color;
+	font-size:12px;
+}
+
+h1{
+	font: 96px $handwriting;
+}
+
+h2{
+	font: 56px $handwriting;
+	color:red;
+	margin-bottom:35px;
+}
+
+
+.fn{
+	position: relative;
+	top:-7px;
+	font-size:60%;
+	color:inherit;
+	&:hover{
+		text-decoration:none;
+		color:#000;
+	}
+}
+
+.button {
+	font:24px $sansfont; 
+	color: #ffffff;
+	padding: 10px 20px;
+	cursor:pointer;
+	background: -moz-linear-gradient(
+		top,
+		#008bee 0%,
+		#0066cc);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#008bee),
+		to(#0066cc));
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #265fb6;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+

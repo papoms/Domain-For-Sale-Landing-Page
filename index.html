@@ -3,6 +3,12 @@
 <head>
 	<meta charset="utf-8" />
 	<title>HTML5 boilerplate—all you really need…</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+	
 	<link rel="stylesheet" type="text/css" href="css/inuit.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<!--[if IE]>
@@ -10,37 +16,62 @@
 	<![endif]-->
 </head>
 
-<body id="home" class="wrapper">
+<body id="home" class="wrapper text-center">
 
-	<div role="main">
-		<h2>PremiumDomain.de ist noch frei!</h2>
-		<p>
-Sie interessieren Sich für PremiumDomain.de als Adresse für Ihre eigene Webseite? Dann haben Sie Glück, denn PremiumDomain.de ist noch nicht vergriffen! PremiumDomain.de ist eine von hunderten starken Adressen die sie noch Heute für Ihre eigene Webseite erwerben können. Interesse? Dann warten Sie nicht zu lange! Unsere guten Adressen werden sehr schnell verkauft.
-		</p>	
-
-		<div id="register">
-			<input type="button" name="register_now" value="PremiumDomain.de jetzt registrieren" id="register_now">
+	<header role="banner">
+		<h1>PremiumDomain.de</h1>
+		<h2>ist noch frei<a href="#" class="fn">*</a></h2>
+		<div id="buynow-top">
+			<a href="#" class="button">PremiumDomain.de jetzt sichern! »</a>
 		</div>
-	</div>
+	</header>
 
-	<aside role="complementary">
-		<nav>
-			<ul id="detail_links" class="nav">
-				<li><a href="#">Gründe für eine gute Domain</a></li>
-				<li><a href="#">Erfolgsgeschichten</a></li>
-				<li><a href="#">Über uns</a></li>
-				<li><a href="#">Fragen und Antworten</a></li>
-			</ul>
-		</nav>
-	</aside>
+	<div id="content" class="cf" role="main">
 
-	<footer id="footer">
+		<div id="introduction">
+		<p>
+			Sie interessieren Sich für PremiumDomain.de als Adresse für Ihre eigene Webseite? Dann haben Sie Glück, denn PremiumDomain.de ist noch zu haben! PremiumDomain.de ist eine der wenigen starken Adressen die sie noch Heute für Ihre eigene Webseite erwerben können.
+			<p><strong> Interesse? Dann warten Sie nicht zu lange!<br />Gute Adressen sind selten und werden sehr schnell verkauft.</strong></p>
+		</p>	
+		</div>
+		
+		<div id="right-form">
+			<h3>Interesse?</h3>
+			<p></p>
+			<form action="#" method="post" accept-charset="utf-8" id="more-information">
+				<input type="text" name="name" value="Ihr Name" id="name"><br />
+				<input type="text" name="email" value="Ihre E-Mail Adresse" id="email">
+				<p><input type="submit" value="Informationen Anfordern" class="button"></p>
+			</form>
+		</div>
+		
+	</div> <!-- End of #content -->
+
+	<footer>
+		<!-- <nav>
+			<ul id="detail-links" class="nav">
+				<li><a href="#">Gründe für eine gute Domain</a> |</li>
+				<li><a href="#">Erfolgsgeschichten</a> |</li>
+				<li><a href="#">Über uns</a> |</li>
+				<li><a href="#">Fragen und Antworten</a> |</li>
+				<li><a href="#">Registrieren vs. Kaufen</a></li>
+				</ul>
+		</nav> -->
+		
+		<div id="badges">
+			<br />
+			<img src="img/badges/imgres.jpeg" width="50" height="50" alt="Imgres 1">
+			<img src="img/badges/imgres-1.jpeg" width="50" height="50" alt="Imgres 1">
+			<img src="img/badges/imgres-2.jpeg" width="50" height="50" alt="Imgres 1">
+			<img src="img/badges/imgres-3.jpeg" width="50" height="50" alt="Imgres 1">
+		</div>
+
 		&copy; 2012 DI S.A. Luxembourg<br/> 
-		<ul id="legal_links" class="nav" >
-			<li><a href="#">AGB</a></li>
-			<li><a href="#">Widerrufsbelehrung</a></li>
-			<li><a href="#">Zahlung und Versand</a></li>
-			<li><a href="#">Privatsphäre und Datenschutz</a></li>
+		<ul id="legal-links" class="nav" >
+			<li><a href="#">AGB</a> |</li>
+			<li><a href="#">Widerrufsbelehrung</a> |</li>
+			<li><a href="#">Zahlung und Versand</a> |</li>
+			<li><a href="#">Privatsphäre und Datenschutz</a> |</li>
 			<li><a href="#">Impressum</a></li>
 		</ul>
 	</footer>
