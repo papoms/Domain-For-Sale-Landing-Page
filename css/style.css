@@ -11,6 +11,12 @@ header {
   background: white;
   padding: 40px;
   border-bottom: 1px solid #cdcdcd; }
+  header h1 {
+    font: 96px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  header h2 {
+    font: 56px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: red;
+    margin-bottom: 35px; }
 
 a {
   text-decoration: underline; }
@@ -23,8 +29,8 @@ a {
   width: 100%; }
 
 /*#right-content{
-	float:right;
-	width:50%;
+float:right;
+width:50%;
 }
 */
 #more-information input {
@@ -36,15 +42,8 @@ footer {
   min-height: 100px;
   background: white;
   border-top: 1px solid #cdcdcd;
-  font-size: 12px; }
-
-h1 {
-  font: 96px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-h2 {
-  font: 56px "Reenie Beanie", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: red;
-  margin-bottom: 35px; }
+  font-size: 12px;
+  padding-top: 15px; }
 
 .fn {
   position: relative;
@@ -77,3 +76,7 @@ h2 {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 0.7);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 1px rgba(255, 255, 255, 0.7);
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0.3); }
+
+/* For the Legal Information overlays*/
+.overlay {
+  overflow-y: auto; }
