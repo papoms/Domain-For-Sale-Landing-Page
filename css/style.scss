@@ -158,6 +158,8 @@ footer{
 				&:hover {
 					@include gradient(lighten(#1993c1, 10%), #1993c1);
 					border-top: 1px solid lighten(#1993c1, 40%);
+
+					text-decoration: none;
 				}
 
 				&:active {
