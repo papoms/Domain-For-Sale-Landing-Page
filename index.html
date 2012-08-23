@@ -6,8 +6,6 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="css/inuit.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -40,7 +38,7 @@
 		<h2 class="editable">ist noch frei<a href="#fn-1" class="fn">*</a></h2>
 
 		<div id="buynow-top">
-			<a href="#" class="button domainLink"><span class="domain">PremiumDomain.de</span> jetzt sichern! »</a>
+			<a href="#" class="button domainLink more"><span class="domain">PremiumDomain.de</span> jetzt sichern!</a>
 		</div>
 
 	</header>
@@ -160,61 +158,38 @@
 </div>
 	
 	<div id="wizard">
-		<div id="domainNameModal" class="reveal-modal">
+		<div id="domainNameModal" class="reveal-modal modal">
 			<h2>Domainname</h2>
-			<p><input type="text" name="domainname" id="domainname"></p>
-			<p><input type="submit" id="setDomainName" value="Weiter"></p>
-			
+			<div class="inner">
+				<form id="domainNameForm">
+					<p>Bitte geben Sie den Namen der Domain, die Sie verkaufen möchten ein.</p>
+					<p><input type="text" name="domainname" id="domainname" placeholder="PremiumDomain.de"></p>
+					<p><input type="submit" id="setDomainName" class="btn" value="Weiter"></p>
+				</form>
+			</div>
+
 			<a class="close-reveal-modal">&#215;</a>
 		</div>
 
-		<div id="domainLinkModal" class="reveal-modal">
+		<div id="domainLinkModal" class="reveal-modal modal">
 			<h2>Kontaktlink</h2>
-			<p>Zum Beispiel der Link zur Sedo Verkaufsseite oder zu ihrem Kontaktformular.</p>
-			<p><input type="text" name="domainlink" id="domainlink"></p>
-			<p><input type="submit" id="setDomainLink" value="Weiter"></p>
+			<div class="inner">
+				<p>Zum Beispiel der Link zur Sedo Verkaufsseite oder zu einem Kontaktformular.</p>
+				<form id="domainLinkForm">
+					<p><input type="text" name="domainlink" id="domainlink" value="http://"></p>
+					<p><input type="submit" id="setDomainLink" class="btn" value="Weiter"></p>
+				</form>
+			</div>
 
 			<a class="close-reveal-modal">&#215;</a>
 		</div>
 
 		<div id="export">
-			Seite exportieren
+			<span class="help">
+				Klicken Sie auf die Texte um diese zu editieren. Wenn alles passt, klicken Sie auf exportieren um den Quelltext der Seite zu erhalten.
+			</span>
+			<a class="btn" href="">Seite exportieren</a>
 		</div>
-
-		<style id="editorStyle">
-		textarea {
-			font-family: 'Helvetica Neue', Arial, sans-serif;
-			font-size: 14px;
-			line-height: 20px;
-			width: 400px;
-		}
-
-		#save {
-			display: block;
-			width: 200px;
-			margin: 0 auto;
-		}
-
-		#editing {
-			display: block;
-			width: 500px;
-			margin: 0 auto 40px;
-			background-color: #fff !important;
-			border: 1px solid #999;
-			padding: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
-		}
-
-		#export {
-			position: fixed;
-			bottom: 0; right: 0;
-			padding: 20px;
-			background: #f1f1f1;
-			border-top: 1px solid #ccc;
-			border-left: 1px solid #ccc;
-			cursor: pointer;
-		}
-		</style>
 		<script id="editorScript" src="js/editor.js"></script>
 	</div>
 </body>

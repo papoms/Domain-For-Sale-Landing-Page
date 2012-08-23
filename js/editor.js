@@ -6,15 +6,18 @@ $(document).ready(function() {
 	$('#domainNameModal').reveal();	
 
 	// Event Listening
-	$('#setDomainName').click(function() {
+	$('#domainNameForm').submit(function() {
 		domain = $('#domainname').val();
 		$('.domain').text(domain);
+		$('title').text(domain + ' jetzt sichern!');
 		$('#domainNameModal .close-reveal-modal').trigger('click');
 
 		$('#domainLinkModal').reveal();
+		
+		return false;
 	});
 
-	$('#setDomainLink').click(function() {
+	$('#domainLinkForm').submit(function() {
 		link = $('#domainlink').val();
 
 		if((link.match('http://') || link.match('https://')) == null) {
@@ -24,9 +27,11 @@ $(document).ready(function() {
 		$('.domainLink').attr('href', link);
 
 		$('#domainLinkModal .close-reveal-modal').trigger('click');
+	
+		return false;
 	});
 
-	$('#export').click(function() {
+	$('#export .btn').click(function() {
 		var html = exportData();
 
 		html = '<pre>' + htmlEntities(html) + '</pre>';
@@ -34,9 +39,10 @@ $(document).ready(function() {
 		$('body').fadeOut(function() {
 			$('body').css('background', 'transparent').css('textAlign', 'left').html(html).fadeIn();
 		});
+
+		return false;
 	});
 
-	/* ================================ Inline Editing ===============
 	var isEditing = false;
 	
 	$('.editable').css('cursor', 'pointer').hover(function() {
@@ -52,7 +58,7 @@ $(document).ready(function() {
 			$(this).attr('id', 'editing');
 			var content = $.trim($(this).html());
 
-			$(this).html('<textarea id="editor" cols="20" rows="10">' + content + '</textarea><input type="submit" value="Speichern" id="save">');
+			$(this).html('<textarea id="editor" cols="20" rows="10">' + content + '</textarea><input type="submit" value="Speichern" id="save" class="btn">');
 		}
 	});
 
@@ -64,7 +70,7 @@ $(document).ready(function() {
 		isEditing = false;
 
 		return false;
-	}); */
+	});
 
 	
 	function exportData() {

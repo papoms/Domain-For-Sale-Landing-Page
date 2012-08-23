@@ -1,14 +1,13 @@
 /* Variables */
 
 $banner-bg: #fff; 
-$bg: #ededed url(../img/css/light_noise_diagonal.png) repeat top left;;
+$bg: #ededed url(../img/css/light_noise_diagonal.png) repeat top left;
 $border-color: #cdcdcd;
 
-$handwriting:'Asap','Arvo','Reenie Beanie', cursive;
-$handwriting:'Reenie Beanie', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$handwriting:'Reenie Beanie', cursive;
 $sansfont:'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-/* Mixins */
 
+/* Mixins */
 @mixin gradient($from, $to){
 	background-color: $from;
 	background-image: -moz-linear-gradient($from, $to);
@@ -44,6 +43,12 @@ header {
 
 a{
 	text-decoration:underline;
+
+	&.more {
+		&:after {
+			content: " »";
+		}
+	}
 }
 #content{
 	max-width:600px;
@@ -128,4 +133,115 @@ footer{
 		/* For the Legal Information overlays*/
 		.overlay{
 			overflow-y:auto;
+		}
+
+/* Editor Styles */
+.btn {
+				// Remove Input Default Border
+				border: none;
+
+				// Overwrite stupid fonts
+				font-family: "Helvetica Neue", Helvetica, sans-serif;
+
+				font-size: 14px;
+				@include gradient(#1993c1, darken(#1993c1, 10%));
+				color: #fff;
+				text-shadow: 0 1px 0 darken(#1993c1, 20%);
+				text-decoration: none;
+				padding: 5px 20px;
+
+				border-top: 1px solid lighten(#1993c1, 30%);
+
+				-webkit-border-radius: 3px;
+				-webkit-box-shadow: 0 0 0 1px darken(#1993c1, 20%);
+
+				&:hover {
+					@include gradient(lighten(#1993c1, 10%), #1993c1);
+					border-top: 1px solid lighten(#1993c1, 40%);
+				}
+
+				&:active {
+					@include gradient(darken(#1993c1, 20%), darken(#1993c1, 10%));
+					border-top: none;
+					border-bottom: 1px solid darken(#1993c1, 20%);
+				}
+			}
+
+textarea {
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 14px;
+			line-height: 20px;
+			width: 400px;
+		}
+
+		#save {
+			display: block;
+			width: 200px;
+			margin: 0 auto;
+		}
+
+		.reveal-modal.modal {
+			-webkit-border-radius: 3px;
+			padding: 0;
+
+			h2 {
+				padding: 20px;
+				display: block;
+				@include gradient(#f1f1f1, #e1e1e1);
+				font-size: 18px;
+				text-align: center;
+				color: darken(#f1f1f1, 70%);
+				border-bottom: 1px solid darken(#e1e1e1, 10%);
+				text-shadow: 0 1px 0 #fff;
+			}
+
+			.inner {
+				padding: 0 20px;
+			}
+
+			input[type="text"] {
+				border: 1px solid #ccc;
+				padding: 10px;
+				outline: none;
+				width: 458px;
+
+				&:focus {
+					border: 1px solid #87b0bf;
+					-webkit-box-shadow: 0 0 4px #87b0bf;
+				}
+			}
+
+			.close-reveal-modal {
+				display: none;
+			}
+		}
+
+		#editing {
+			display: block;
+			width: 500px;
+			margin: 0 auto 40px;
+			background-color: #fff !important;
+			border: 1px solid #999;
+			padding: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+
+		#export {
+			position: fixed;
+			bottom: 0; right: 0;
+			width: 100%;
+			@include gradient(#f1f1f1, #d1d1d1);
+			-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+			padding: 20px;
+			border-top: 1px solid #fff;
+			text-align: right;
+
+			.help {
+				font-size: 13px;
+				margin-right: 20px;
+			}
+
+			.btn {
+				padding: 10px 20px;
+			}
 		}
